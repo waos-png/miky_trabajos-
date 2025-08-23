@@ -1,5 +1,3 @@
-package biblioteca;
-
 import java.util.*;
 
 class Prestamo {

@@ -1,8 +1,7 @@
-package biblioteca;
 
 import java.util.*;
 
-public class Main {
+public class Main_biblioteca {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
         Scanner sc = new Scanner(System.in);

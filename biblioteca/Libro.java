@@ -1,4 +1,3 @@
-package biblioteca;
 
 public class Libro {
     String titulo, autor, codigo;

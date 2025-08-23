@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Main {
+public class Main_vehiculoas {
     public static void main(String[] args) {
         Vehiculo vehiculoBase = new Vehiculo("Genérica", "ModeloX", 2020);
         Vehiculo auto = new Auto("Toyota", "Corolla", 2022);
