@@ -6,17 +6,19 @@ public class Okarun extends personajes {
             edad,
             "Espiritual",
             "Turbo Speed",
-            "Transformación, velocidad extrema y puede correr 100km/h ",
+            "Transformación, velocidad extrema",
+            "Ataques veloces, esquiva rápida",
             90, 
             85, 
             80, 
-            70  
+            70,
+            "Okarun puede transformarse y alcanzar velocidades sobrehumanas, heredando el poder de la Turbo Abuela para combatir amenazas sobrenaturales."
         );
     }
 
     @Override
     public void accion() {
-        System.out.println(getNombre() + " se puede transformar en una versión de la turbo abuela y corre a gran velocidad, por el momento no se ha visto al 100%.");
+        System.out.println(getNombre() + " se transforma y corre a gran velocidad para atacar o esquivar.");
         atacar();
         defender();
         usarPoder();

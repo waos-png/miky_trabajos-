@@ -9,10 +9,12 @@ public class Jiji extends personajes {
             "Maldición",
             "Mal de ojo",
             "Control de energía maldita",
+            "Transformación por agua, ataques malditos",
             75,
             90, 
             65, 
-            80 
+            80,
+            "Jiji está maldito y puede transformarse dependiendo del tipo de agua que toque, usando el mal de ojo para atacar o defenderse."
         );
         this.aguaTocada = aguaTocada;
     }
@@ -24,13 +26,13 @@ public class Jiji extends personajes {
     @Override
     public void mostrarInfo() {
         super.mostrarInfo();
-        System.out.println("agua tocada: " + aguaTocada);
+        System.out.println("    Agua tocada: " + aguaTocada);
     }
 
     @Override
     public void accion() {
         if ("fria".equals(aguaTocada)) {
-            System.out.println(getNombre() + " se transforma por tocar agua fria.");
+            System.out.println(getNombre() + " usa el mal de ojo por tocar agua fría (transformación).");
             usarPoder();
             atacar();
         } else if ("caliente".equals(aguaTocada)) {
@@ -38,9 +40,7 @@ public class Jiji extends personajes {
             defender();
             System.out.println(getNombre() + " corre para protegerse.");
         } else {
-            System.out.println(getNombre() + " está en estado normal.");
-            defender();
-            System.out.println(getNombre() + " corre para protegerse.");
+            System.out.println(getNombre() + " no ha tocado agua y no puede usar sus poderes.");
         }
         recuperarEnergia(8);
     }

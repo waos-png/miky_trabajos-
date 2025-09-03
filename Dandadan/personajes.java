@@ -1,52 +1,59 @@
 package Dandadan;
+
 public abstract class personajes {
     private String nombre;
     private int edad;
     private String tipoPoder;
-    private String poder;
-    private String habilidades;
-    private int nivel_stamina;
-    private int nivel_energia;
-    private int nivel_ataque;
-    private int nivel_defensa;
+    private String poderPrincipal;
+    private String habilidadesFisicas;
+    private String habilidadesDeCombate;
+    private int nivelStamina;
+    private int nivelEnergia;
+    private int nivelAtaque;
+    private int nivelDefensa;
+    private String descripcion;
 
-    public personajes(String nombre, int edad, String tipoPoder, String poder, String habilidades, int nivel_stamina, int nivel_energia, int nivel_ataque, int nivel_defensa) {
+    public personajes(String nombre, int edad, String tipoPoder, String poderPrincipal, String habilidadesFisicas, String habilidadesDeCombate, int nivelStamina, int nivelEnergia, int nivelAtaque, int nivelDefensa, String descripcion) {
         this.nombre = nombre;
         this.edad = edad;
         this.tipoPoder = tipoPoder;
-        this.poder = poder;
-        this.habilidades = habilidades;
-        this.nivel_stamina = nivel_stamina;
-        this.nivel_energia = nivel_energia;
-        this.nivel_ataque = nivel_ataque;
-        this.nivel_defensa = nivel_defensa;
+        this.poderPrincipal = poderPrincipal;
+        this.habilidadesFisicas = habilidadesFisicas;
+        this.habilidadesDeCombate = habilidadesDeCombate;
+        this.nivelStamina = nivelStamina;
+        this.nivelEnergia = nivelEnergia;
+        this.nivelAtaque = nivelAtaque;
+        this.nivelDefensa = nivelDefensa;
+        this.descripcion = descripcion;
     }
 
     public String getNombre() { return nombre; }
     public int getEdad() { return edad; }
     public String getTipoPoder() { return tipoPoder; }
-    public String getPoder() { return poder; }
-    public String getHabilidades() { return habilidades; }
-    public int getNivelStamina() { return nivel_stamina; }
-    public int getNivelEnergia() { return nivel_energia; }
-    public int getNivelAtaque() { return nivel_ataque; }
-    public int getNivelDefensa() { return nivel_defensa; }
+    public String getPoderPrincipal() { return poderPrincipal; }
+    public String getHabilidadesFisicas() { return habilidadesFisicas; }
+    public String getHabilidadesDeCombate() { return habilidadesDeCombate; }
+    public int getNivelStamina() { return nivelStamina; }
+    public int getNivelEnergia() { return nivelEnergia; }
+    public int getNivelAtaque() { return nivelAtaque; }
+    public int getNivelDefensa() { return nivelDefensa; }
+    public String getDescripcion() { return descripcion; }
 
     public void atacar() {
-        System.out.println(nombre + " ataca con fuerza de " + nivel_ataque + ".");
+        System.out.println(nombre + " ataca con " + habilidadesDeCombate + " (Ataque: " + nivelAtaque + ").");
     }
 
     public void defender() {
-        System.out.println(nombre + " se defiende con nivel " + nivel_defensa + ".");
+        System.out.println(nombre + " se defiende usando " + habilidadesFisicas + " (Defensa: " + nivelDefensa + ").");
     }
 
     public void usarPoder() {
-        System.out.println(nombre + " usa su poder especial: " + poder + ".");
+        System.out.println(nombre + " usa su poder principal: " + poderPrincipal + ".");
     }
 
     public void recuperarEnergia(int cantidad) {
-        nivel_energia += cantidad;
-        System.out.println(nombre + " recupera " + cantidad + " puntos de energía. Energía actual: " + nivel_energia);
+        nivelEnergia += cantidad;
+        System.out.println(nombre + " recupera " + cantidad + " puntos de energía. Energía actual: " + nivelEnergia);
     }
 
     public void mostrarInfo() {
@@ -54,12 +61,14 @@ public abstract class personajes {
             "    Nombre: " + nombre +
             "\n    Edad: " + edad +
             "\n    Tipo de Poder: " + tipoPoder +
-            "\n    Poder: " + poder +
-            "\n    Habilidades: " + habilidades +
-            "\n    Nivel Stamina: " + nivel_stamina +
-            "\n    Nivel Energía: " + nivel_energia +
-            "\n    Nivel Ataque: " + nivel_ataque +
-            "\n    Nivel Defensa: " + nivel_defensa
+            "\n    Poder Principal: " + poderPrincipal +
+            "\n    Habilidades Físicas: " + habilidadesFisicas +
+            "\n    Habilidades de Combate: " + habilidadesDeCombate +
+            "\n    Nivel Stamina: " + nivelStamina +
+            "\n    Nivel Energía: " + nivelEnergia +
+            "\n    Nivel Ataque: " + nivelAtaque +
+            "\n    Nivel Defensa: " + nivelDefensa +
+            "\n    Descripción: " + descripcion
         );
     }
 

@@ -12,33 +12,33 @@ public class main_dandadan {
         int opcion;
         do {
             System.out.println("\n______________________________");
-            System.out.println("      MENÚ DANDADAN");
+            System.out.println("      MENU DANDADAN");
             System.out.println("______________________________");
-            System.out.println("  1. Elegir personaje y ver acción");
-            System.out.println("  2. Mostrar descripción de todos");
+            System.out.println("  1. Elegir personaje y ver accion");
+            System.out.println("  2. Mostrar descripcion de todos");
             System.out.println("  3. Salir");
             System.out.println("______________________________");
-            System.out.print("Elige una opción: ");
+            System.out.print("Elige una opcion: ");
             opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
-                    System.out.println("\n___ Elige personaje ___");
+                    System.out.println("\n___ Elige un personaje ___");
                     System.out.println("  1. Momo");
                     System.out.println("  2. Okarun");
                     System.out.println("  3. Jiji");
                     System.out.println("  4. Aira");
-                    System.out.print("Opción: ");
+                    System.out.print("Opcion: ");
                     int p = sc.nextInt();
                     if (p == 1) momo.accion();
                     else if (p == 2) okarun.accion();
                     else if (p == 3) jiji.accion();
                     else if (p == 4) aira.accion();
-                    else System.out.println("Opción no válida");
+                    else System.out.println("Opcion no valida");
                     break;
                 case 2:
                     System.out.println("\n______________________________");
-                    System.out.println("  DESCRIPCIÓN DE PERSONAJES");
+                    System.out.println("  DESCRIPCION DE PERSONAJES");
                     System.out.println("______________________________");
                     System.out.print("Momo: ");
                     momo.mostrarInfo();
@@ -53,7 +53,7 @@ public class main_dandadan {
                     System.out.println("\nSaliendo...");
                     break;
                 default:
-                    System.out.println("\nOpción no válida");
+                    System.out.println("\nOpcion no valida");
             }
         } while (opcion != 3);
 
